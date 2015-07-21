@@ -1,0 +1,117 @@
+[OPTIONS]
+Binary TOC=No
+Binary Index=Yes
+Compiled file=Bootstrap.chm
+Contents file=Contents.hhc
+Index file=Index.hhk
+Default window=
+Default topic=index.html
+Full-text search=Yes
+Auto index=Yes
+Language=0x0000 <unknown>
+Title=Bootstrap Help
+Create CHI file=No
+Compatibility=1.1 or later
+Error log file=
+Full text search stop list file=
+Display compile progress=Yes
+Display compile notes=Yes
+Enhanced decompilation=No
+Flat=No
+
+[FILES]
+about\index.html
+apple-touch-icon.png
+assets\brand\bootstrap-outline.svg
+assets\brand\bootstrap-punchout.svg
+assets\brand\bootstrap-solid.svg
+assets\css\docs.min.css
+assets\css\src\docs.css
+assets\css\src\pygments-manni.css
+assets\flash\ZeroClipboard.swf
+assets\img\components.png
+assets\img\devices.png
+assets\img\sass-less.png
+browser-bugs\index.html
+components\index.html
+css\index.html
+customize\index.html
+dist\css\bootstrap-theme.css
+dist\css\bootstrap-theme.css.map
+dist\css\bootstrap-theme.min.css
+dist\css\bootstrap.css
+dist\css\bootstrap.css.map
+dist\css\bootstrap.min.css
+dist\fonts\glyphicons-halflings-regular.eot
+dist\fonts\glyphicons-halflings-regular.svg
+dist\fonts\glyphicons-halflings-regular.ttf
+dist\fonts\glyphicons-halflings-regular.woff
+dist\fonts\glyphicons-halflings-regular.woff2
+examples\blog\blog.css
+examples\blog\index.html
+examples\carousel\carousel.css
+examples\carousel\index.html
+examples\cover\cover.css
+examples\cover\index.html
+examples\dashboard\dashboard.css
+examples\dashboard\index.html
+examples\grid\grid.css
+examples\grid\index.html
+examples\jumbotron\index.html
+examples\jumbotron\jumbotron.css
+examples\jumbotron-narrow\index.html
+examples\jumbotron-narrow\jumbotron-narrow.css
+examples\justified-nav\index.html
+examples\justified-nav\justified-nav.css
+examples\navbar\index.html
+examples\navbar\navbar.css
+examples\navbar-fixed-top\index.html
+examples\navbar-fixed-top\navbar-fixed-top.css
+examples\navbar-static-top\index.html
+examples\navbar-static-top\navbar-static-top.css
+examples\non-responsive\index.html
+examples\non-responsive\non-responsive.css
+examples\offcanvas\index.html
+examples\offcanvas\offcanvas.css
+examples\offcanvas\offcanvas.js
+examples\screenshots\blog.jpg
+examples\screenshots\carousel.jpg
+examples\screenshots\cover.jpg
+examples\screenshots\dashboard.jpg
+examples\screenshots\equal-height-columns.jpg
+examples\screenshots\grid.jpg
+examples\screenshots\jumbotron-narrow.jpg
+examples\screenshots\jumbotron.jpg
+examples\screenshots\justified-nav.jpg
+examples\screenshots\navbar-fixed.jpg
+examples\screenshots\navbar-static.jpg
+examples\screenshots\navbar.jpg
+examples\screenshots\non-responsive.jpg
+examples\screenshots\offcanvas.jpg
+examples\screenshots\sign-in.jpg
+examples\screenshots\starter-template.jpg
+examples\screenshots\sticky-footer-navbar.jpg
+examples\screenshots\sticky-footer.jpg
+examples\screenshots\theme.jpg
+examples\signin\index.html
+examples\signin\signin.css
+examples\starter-template\index.html
+examples\starter-template\starter-template.css
+examples\sticky-footer\index.html
+examples\sticky-footer\sticky-footer.css
+examples\sticky-footer-navbar\index.html
+examples\sticky-footer-navbar\sticky-footer-navbar.css
+examples\theme\index.html
+examples\theme\theme.css
+examples\tooltip-viewport\index.html
+examples\tooltip-viewport\tooltip-viewport.css
+examples\tooltip-viewport\tooltip-viewport.js
+favicon.ico
+getting-started\index.html
+index.html
+javascript\index.html
+LICENSE
+migration\index.html
+robots.txt
+sitemap.xml
+
