@@ -6,6 +6,7 @@ import re
 
 ENC = 'utf-8'
 HSTR = "<OBJECT type=\"text/sitemap\">\n" + "<param name=\"Name\" value=\"{0}\">\n" + "<param name=\"Local\" value=\"{1}\">\n" + "</OBJECT>\n"
+NOJS = 1
 
 
 def copyanything(src, dst):
@@ -34,7 +35,11 @@ def initFile(f):
 	st = fpt.read()
 	fpt.close()
 
-	mobj = re.findall("(?ims)<script.*?</script>", st) # remove online scripts (or all scripts)
+	if NOJS == 1:
+		mobj = re.findall("(?ims)<script.*?</script>", st) # remove all scripts
+	else:
+		mobj = re.findall("(?ims)<script>.*?</script>", st) # remove only online scripts
+
 	for k in mobj:
 		st = st.replace(k,'')
 	
@@ -115,6 +120,12 @@ if os.path.isdir('build'):
 	shutil.rmtree('build')
 copyanything('src', 'build')
 
+if NOJS:
+	for root, dirs, files in os.walk('build'):
+		for i in dirs:
+			if i == 'js':
+				shutil.rmtree(os.path.join(root, i))
+
 # build file index
 for item in os.listdir('build'):
 	item = 'build\\' + item
@@ -130,6 +141,8 @@ for item in os.listdir('build'):
 				if tmp.endswith('.html'):
 					print(tmp)
 					initFile(tmp)
+			# if NOJS:
+			# 	dirs[:] = [d for d in dirs if d not in ['js']]
 
 # build hhc data from interested files
 helpFiles = ['index.html', 'getting-started', 'css', 'components', 'javascript', 'customize', 'examples', 'migration', 'about', 'browser-bugs']
