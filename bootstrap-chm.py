@@ -116,9 +116,13 @@ def makeFile(f, d):
 fileList = []
 contents = ''
 
+print('Program starting')
+
 if os.path.isdir('build'):
 	shutil.rmtree('build')
 copyanything('src', 'build')
+
+print('Folder copied to build')
 
 if NOJS:
 	for root, dirs, files in os.walk('build'):
@@ -139,8 +143,10 @@ for item in os.listdir('build'):
 				tmp = os.path.join(root, name)
 				fileList += [tmp]
 				if tmp.endswith('.html'):
-					print(tmp)
+					# print(tmp)
 					initFile(tmp)
+
+print('HTML pruned')
 
 # build hhc data from interested files
 helpFiles = ['index.html', 'getting-started', 'css', 'components', 'javascript', 'customize', 'examples', 'migration', 'about', 'browser-bugs']
@@ -161,6 +167,7 @@ for item in helpFiles:
 			if j.endswith('.html'):
 				contents += makeHHC(item + '\\' + j)
 
+print('HHC Data built')
 
 # BS fails to remove ul with multiple class. So
 s = re.findall('(?i)<ul.*?>', contents)
@@ -173,3 +180,5 @@ indexData = contents.replace('<ul>', '').replace('</ul>', '') # keep all in one 
 makeFile('Index.hhk', indexData + '\n</ul></body></html>')
 
 makeFile('Bootstrap.hhp', '\n'.join( [s[6:] for s in fileList] )) # remove build/
+
+print('The End')
