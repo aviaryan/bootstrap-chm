@@ -141,8 +141,6 @@ for item in os.listdir('build'):
 				if tmp.endswith('.html'):
 					print(tmp)
 					initFile(tmp)
-			# if NOJS:
-			# 	dirs[:] = [d for d in dirs if d not in ['js']]
 
 # build hhc data from interested files
 helpFiles = ['index.html', 'getting-started', 'css', 'components', 'javascript', 'customize', 'examples', 'migration', 'about', 'browser-bugs']
@@ -170,5 +168,8 @@ for k in s:
 	contents = contents.replace(k, '<ul>')
 
 makeFile('Contents.hhc', contents + '\n</ul></body></html>')
-makeFile('Index.hhk', contents + '\n</ul></body></html>')
+
+indexData = contents.replace('<ul>', '').replace('</ul>', '') # keep all in one level. better for search
+makeFile('Index.hhk', indexData + '\n</ul></body></html>')
+
 makeFile('Bootstrap.hhp', '\n'.join( [s[6:] for s in fileList] )) # remove build/
