@@ -5,6 +5,7 @@ import re
 
 
 ENC = 'utf-8'
+HSTR = "<OBJECT type=\"text/sitemap\">\n" + "<param name=\"Name\" value=\"{0}\">\n" + "<param name=\"Local\" value=\"{1}\">\n" + "</OBJECT>\n"
 
 
 def copyanything(src, dst):
@@ -66,7 +67,7 @@ def makeHHC(f):
 	soup = BeautifulSoup(open(f, 'r', encoding=ENC), 'html.parser')
 	navs = soup.body.find("ul", class_ = "bs-docs-sidenav")
 
-	prec = ("<li><OBJECT type=\"text/sitemap\">\n" + "<param name=\"Name\" value=\"{0}\">\n" + "<param name=\"Local\" value=\"{1}\">\n" + "</OBJECT>\n").format(soup.title.string.replace('· Bootstrap', '').strip(), f2) # page entry - remove  · Bootstrap
+	prec = ("<li>" + HSTR).format(soup.title.string.replace('· Bootstrap', '').strip(), f2) # page entry - remove  · Bootstrap
 
 	if navs == None:
 		return prec + '</li>\n'
@@ -77,7 +78,7 @@ def makeHHC(f):
 	for k in navs.find_all("li"):
 		name = k.a.string
 		value = f2 + k.a['href']
-		hh_str = ("<OBJECT type=\"text/sitemap\">\n" + "<param name=\"Name\" value=\"{0}\">\n" + "<param name=\"Local\" value=\"{1}\">\n" + "</OBJECT>\n").format(name, value)
+		hh_str = (HSTR).format(name, value)
 		k.a.replace_with(hh_str)
 
 	navs = str(navs).replace('&lt;', '<').replace('&gt;', '>')
@@ -138,7 +139,7 @@ for item in helpFiles:
 	if os.path.isfile(item):
 		contents += makeHHC(item)
 	elif item == 'build\\examples':
-		st = ("<li><OBJECT type=\"text/sitemap\">\n" + "<param name=\"Name\" value=\"{0}\">\n" + "<param name=\"Local\" value=\"{1}\">\n" + "</OBJECT>\n<ul>").format('Examples', '')
+		st = ("<li>" + HSTR + "<ul>").format('Examples', '')
 		for j in os.listdir(item):
 			for k in os.listdir(item + '\\' + j):
 				if k.endswith('.html'):
@@ -157,4 +158,4 @@ for k in s:
 
 makeFile('Contents.hhc', contents + '\n</ul></body></html>')
 makeFile('Index.hhk', contents + '\n</ul></body></html>')
-makeFile('Bootstrap.hhp', '\n'.join( [s[6:] for s in fileList] ))
+makeFile('Bootstrap.hhp', '\n'.join( [s[6:] for s in fileList] )) # remove build/
