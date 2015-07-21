@@ -13,3 +13,10 @@ For the docs to be presented in CHM format, all JavaScript had to be removed. So
 2. Copy the compiled site into `src` directory. 
 3. Run bootstrap-chm.py
 4. Compile the files in `build` directory using a HtmlHelp compiler. I am using [Precision Helper](http://www.be-precision.com/products/precision-helper/).
+
+
+### FAQ
+
+> I see nothing/blank when I open the CHM file ? (Windows)
+
+Open bootstrap.chm properties and unblock it.
