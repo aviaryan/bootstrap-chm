@@ -11,7 +11,7 @@ For the docs to be presented in CHM format, all JavaScript had to be removed. So
 
 1. Get Jekyll and compile the [official Bootstrap docs](https://github.com/twbs/bootstrap).
 2. Copy the compiled site into `src` directory. 
-3. Run bootstrap-chm.py
+3. `python bootstrap-chm.py`
 4. Compile the files in `build` directory using a HtmlHelp compiler. I am using [Precision Helper](http://www.be-precision.com/products/precision-helper/).
 
 
