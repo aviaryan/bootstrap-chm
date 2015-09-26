@@ -8,7 +8,6 @@ ENC = 'utf-8'
 HSTR = "<OBJECT type=\"text/sitemap\">\n" + "<param name=\"Name\" value=\"{0}\">\n" + "<param name=\"Local\" value=\"{1}\">\n" + "</OBJECT>\n"
 NOJS = 1
 
-
 def copyanything(src, dst):
 	# copy tree from src to dst
 	# Taken from Stack Overflow (dont have the link)
@@ -22,12 +21,12 @@ def copyanything(src, dst):
 
 
 def initFile(f):
-	'''
+	"""
 	initFile(f):
 		f = file path
 	Purpose - 
 		Clears extra JS and stuff from HTML file that should not be in the CHM doc
-	'''
+	"""
 
 	# Not using BS as it had some issues with encoding
 
@@ -61,12 +60,12 @@ def initFile(f):
 
 
 def makeHHC(f):
-	'''
+	"""
 	makeHHC(f):
 		f = file path
 	Purpose -
 		Makes HHC HTML string from a Bootstrap documentation file
-	'''
+	"""
 	f2 = f[6:] # remove build
 
 	soup = BeautifulSoup(open(f, 'r', encoding=ENC), 'html.parser')
@@ -91,13 +90,13 @@ def makeHHC(f):
 
 
 def makeFile(f, d):
-	'''
+	"""
 	makeHHPFile(f, d):
 		f = file path to make
 		d = data to be added
 	Purpose - 
 		Makes Contents.hhc, Index.hhk and Bootstrap.hhp file
-	'''
+	"""
 	copyanything(f, 'build\\' + f)
 	p = 'build\\' + f
 	fptr = open(p, 'r')
