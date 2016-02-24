@@ -2,6 +2,13 @@
 Bootstrap documentation in chm, complete with **Index** and **TOC**. See [Releases](https://github.com/aviaryan/bootstrap-chm/releases) for download links. Current version is 3.3.5.
 
 
+### Preview
+
+![Contents](http://i.imgur.com/VcaYF4U.png)
+
+![Index](http://i.imgur.com/OgykiQi.png)
+
+
 ### Just a word
 
 For the docs to be presented in CHM format, all JavaScript had to be removed. So the CHM docs may not behave exactly as their online counterpart. 
