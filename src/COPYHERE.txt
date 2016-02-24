@@ -1,0 +1,9 @@
+index.html
+favicon.ico
+assets/*
+components/*
+...
+...
+blah blah
+
+copy everything
