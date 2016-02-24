@@ -19,6 +19,7 @@ See [project releases](https://github.com/aviaryan/bootstrap-chm/releases)
 1. Get Jekyll and compile the [official Bootstrap docs](https://github.com/twbs/bootstrap).
 2. Copy the compiled site into `src` directory. 
 3. `python bootstrap-chm.py`
+4. The files in the src directory are parsed and HTMLHelp suitable project files are created in the build directory.
 4. Compile the files in `build` directory using a HtmlHelp compiler. I am using [Precision Helper](http://www.be-precision.com/products/precision-helper/).
 
 
