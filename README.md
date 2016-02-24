@@ -1,5 +1,10 @@
 # bootstrap-chm
-Bootstrap documentation in chm, complete with **Index** and **TOC**. See [Releases](https://github.com/aviaryan/bootstrap-chm/releases) for download links. Current version is 3.3.5.
+Bootstrap documentation in chm, complete with **Index** and **TOC**. Current version is 3.3.5.
+
+
+### Download
+
+See [project releases](https://github.com/aviaryan/bootstrap-chm/releases)
 
 
 ### Preview
