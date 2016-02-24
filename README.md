@@ -9,11 +9,6 @@ Bootstrap documentation in chm, complete with **Index** and **TOC**. See [Releas
 ![Index](http://i.imgur.com/OgykiQi.png)
 
 
-### Just a word
-
-For the docs to be presented in CHM format, all JavaScript had to be removed. So the CHM docs may not behave exactly as their online counterpart. 
-
-
 ### Building the docs
 
 1. Get Jekyll and compile the [official Bootstrap docs](https://github.com/twbs/bootstrap).
